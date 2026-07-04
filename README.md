@@ -1,139 +1,167 @@
-# Personal Library Management System
+# Library System
 
-A console-based library management system written in C that provides an interactive interface for browsing books, research papers, journals, newspapers, and movies.
+A console-based Library Management System developed in C that provides an interactive menu-driven interface for accessing books, research papers, journals, newspapers, and entertainment content. The application uses a simple authentication system and terminal-based navigation to simulate a personal digital library.
 
 ## Features
 
-- **Secure Login**: Password-protected access with a 4-digit PIN
-- **Interactive Menu System**: Easy-to-navigate menu with multiple categories
-- **Colorful Interface**: ANSI color codes for enhanced visual experience
-- **Multiple Categories**:
-  - Books collection with descriptions
-  - Research papers on various topics
-  - Academic journals
-  - Newspaper listings
-  - Movie collection with streaming option
-  - About section
+* User login authentication
+* Interactive menu system
+* Book collection section
+* Research paper topics section
+* Journal collection section
+* Newspaper information section
+* About section
+* Movie collection section
+* Console animations and coloured terminal output
+* Session logout functionality
 
-## System Requirements
+## Technologies Used
 
-- **Operating System**: Windows (uses `conio.h` and `system("cls")`)
-- **Compiler**: GCC or any C compiler supporting standard libraries
-- **Dependencies**: 
-  - `stdio.h` - Standard input/output
-  - `stdlib.h` - Standard library functions
-  - `unistd.h` - UNIX standard library (for sleep function)
-  - `conio.h` - Console input/output (Windows specific)
+* C Programming Language
+* Standard C Libraries
+* Console-based User Interface
 
-## Installation & Compilation
+Libraries used:
 
-1. **Clone or download** the source code
-2. **Compile** using GCC:
-   ```bash
-   gcc main.c -o library_system
-   ```
-3. **Run** the executable:
-   ```bash
-   ./library_system
-   ```
+```c
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+#include<conio.h>
+```
 
-## Usage
+## System Workflow
 
-### Login
-- Enter the 4-digit password: `1183`
-- System will verify credentials and grant access
+```text
+Start Program
+      ↓
+ Login Authentication
+      ↓
+ Library Main Menu
+      ↓
+ ┌────────────────────┐
+ │ 1. Books           │
+ │ 2. Research Papers │
+ │ 3. Journals        │
+ │ 4. Newspapers      │
+ │ 5. About           │
+ │ 6. Movies          │
+ │ 0. Logout          │
+ └────────────────────┘
+      ↓
+ Display Selected Content
+      ↓
+ Return to Main Menu
+```
 
-### Navigation
-The main menu offers 6 options:
-1. **List of Books** - Browse 10 curated books with descriptions
-2. **Research Papers** - Access 7 research topics
-3. **Journals** - View 4 academic journals
-4. **Newspapers** - Browse 3 newspaper listings
-5. **About** - Information about the system
-6. **Movies** - Browse movie collection with streaming option
+## Installation and Execution
 
-### Special Features
-- **Auto-clearing screen** after each selection
-- **Animated text** with sleep delays for better UX
-- **Color-coded output** for different sections
-- **Loop-back menu** system for continuous browsing
-- **Secure logout** option (press 0)
+### Clone the repository
 
-## Content Overview
+```bash
+git clone https://github.com/shanta0338/Library-System.git
+```
 
-### Books Collection
-- Steve Jobs Biography
-- 12 Rules for Life
-- Atomic Habits
-- Leaders Eat Last
-- Start with Why
-- Psychology of Money
-- Theory of Everything
-- Deep Work
-- The Infinite Game
-- The Alchemist
+### Navigate to project directory
 
-### Research Papers
-- Coronavirus research
-- Alcohol studies
-- AI & Machine Learning
-- Inflation analysis
-- Quantum Computing
-- Smoking research
+```bash
+cd Library-System
+```
 
-### Academic Journals
-- Science Magazine
-- Nature
-- International Journal of Computer Vision
-- ACM Computer Survey
+### Compile the program
+
+Using GCC:
+
+```bash
+gcc library.c -o library
+```
+
+### Run the application
+
+Windows:
+
+```bash
+library.exe
+```
+
+Linux:
+
+```bash
+./library
+```
+
+## Default Login Credentials
+
+Password:
+
+```text
+1183
+```
+
+## Project Structure
+
+```text
+Library-System/
+│
+├── library.c
+├── README.md
+```
+
+## Sample Functionalities
+
+### Books
+
+* Steve Jobs
+* Atomic Habits
+* Deep Work
+* The Alchemist
+* Psychology of Money
+* Start With Why
+
+### Research Topics
+
+* Coronavirus
+* Artificial Intelligence and Machine Learning
+* Quantum Computing
+* Inflation
+* Smoking
+
+### Journals
+
+* Science
+* Nature
+* International Journal of Computer Vision
+* ACM Computing Surveys
+
+### Newspapers
+
+* The Daily Star
+* The Daily Ittefaq
+* Prothom Alo
 
 ### Movies
-- John Wick series
-- DC movies collection
-- Marvel Cinematic Universe films
 
-## User ID Information
+* John Wick Series
+* DC Movies
+* Marvel Movies
 
-- **System ID**: 222-35-1183
-- **Password**: 1183
-- **Version**: Library Version 23.3
-- **Developer**: Student of Daffodil International University
+## Future Improvements
 
-## Technical Details
+* Add file handling for permanent storage
+* Add book borrowing and return functionality
+* Add user registration system
+* Add search functionality
+* Add database integration
+* Add graphical user interface
+* Add recommendation system
+* Improve security with encrypted passwords
 
-### Key Functions
-- `login()` - Handles authentication
-- `library()` - Main menu navigation
-- `book()` - Books listing
-- `research()` - Research papers
-- `journals()` - Academic journals
-- `newspaper()` - Newspaper listings
-- `about()` - System information
-- `movies()` - Movie collection with streaming
+## Author
 
-### Security Features
-- Password verification system
-- Session timeout on invalid credentials
-- Access control with user identification
+Shanta
+BSc in Software Engineering
+Daffodil International University
 
-## Troubleshooting
+## License
 
-### Common Issues
-1. **Compilation errors**: Ensure all required headers are available
-2. **Screen clearing issues**: `system("cls")` is Windows-specific
-3. **Sleep function**: May need adjustment for different systems
-4. **Color codes**: ANSI codes may not work on all terminals
-
-### Platform Compatibility
-- **Windows**: Full compatibility
-- **Linux/Mac**: May require modifications to `conio.h` dependencies and `system("cls")` calls
-
-## Future Enhancements
-
-- [ ] File-based data storage
-- [ ] Multiple user support
-- [ ] Search functionality
-- [ ] Add/remove content features
-- [ ] Cross-platform compatibility
-- [ ] Database integration
-
+This project is open source and available under the MIT License.
